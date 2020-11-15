@@ -17,7 +17,7 @@ const commands = {
     description: "Return side of coin",
     process: () => {
       var side = Math.floor(Math.random() * 2) == 1 ? "ОРЕЛ" : "РЕШКА";
-      (`Выпала **${side}**.`);
+      return (`Выпала **${side}**.`);
     }
   }
 };
