@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
-const TOKEN = process.ENV.TOKEN;
-const PREFIX = process.ENV.PREFIX
+const TOKEN = process.env.TOKEN;
+const PREFIX = process.env.PREFIX
 
 const bot = new Discord.Client();
 
