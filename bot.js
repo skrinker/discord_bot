@@ -9,7 +9,7 @@ const {
   commands
 } = require("./commands.js");
 
-const getCommand = (message) => message.split(" ")[0].split(config.prefix)[1];
+const getCommand = (message) => message.split(" ")[0].split(PREFIX)[1];
 const isCommand = (message) => message[0] == PREFIX;
 const getParameters = (message) => {
   parameters = message.split(" ");
