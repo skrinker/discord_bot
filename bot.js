@@ -1,17 +1,23 @@
 const Discord = require("discord.js");
-const config = require("./config.json");
+
+const TOKEN = process.ENV.TOKEN;
+const PREFIX = process.ENV.PREFIX
+
 const bot = new Discord.Client();
-const { commands } = require("./commands.js");
+
+const {
+  commands
+} = require("./commands.js");
 
 const getCommand = (message) => message.split(" ")[0].split(config.prefix)[1];
-const isCommand = (message) => message[0] == config.prefix;
+const isCommand = (message) => message[0] == PREFIX;
 const getParameters = (message) => {
   parameters = message.split(" ");
   parameters.shift();
   return parameters;
 };
 
-bot.login(config.token);
+bot.login(TOKEN);
 
 bot.on("ready", function () {
   console.log("OK");
