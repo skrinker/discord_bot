@@ -16,8 +16,8 @@ const commands = {
     usage: "!flip",
     description: "Return side of coin",
     process: () => {
-      var side = Math.floor(Math.random() * 2) == 1 ? "ОРЕЛ" : "РЕШКА";
-      return (`Выпала **${side}**.`);
+      var side = Math.floor(Math.random() * 2) == 1 ? ['', "ОРЕЛ"] : ["a", "РЕШКА"];
+      return (`Выпал${side[0]} **${side[1]}**.`);
     }
   }
 };
